@@ -1,6 +1,6 @@
 Name:           pg_repack
-Version:        1.4.8
-Release:        2%{?dist}
+Version:        1.5.1
+Release:        1%{?dist}
 Summary:        Reorganize tables in PostgreSQL databases without any locks
 
 License:        BSD
@@ -63,6 +63,9 @@ make
 
 
 %changelog
+* Mon Nov 4 2024 Filip Janus <fjanus@redhat.com> - 1.5.1-1
+- Update to v1.5.1
+
 * Mon Aug 19 2024 Ales Nezbeda <anezbeda@redhat.com> 1.4.8-2
 - Add new build dependencies to fix build with lz4 enabled
 - Related: RHEL-47604
