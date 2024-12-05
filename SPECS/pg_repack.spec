@@ -1,5 +1,5 @@
 Name:           pg_repack
-Version:        1.4.8
+Version:        1.5.1
 Release:        1%{?dist}
 Summary:        Reorganize tables in PostgreSQL databases without any locks
 
@@ -62,6 +62,9 @@ make
 
 
 %changelog
+* Mon Nov 4 2024 Filip Janus <fjanus@redhat.com> - 1.5.1-1
+- Update to 1.5.1
+
 * Fri Oct 13 2023 Filip Janus <fjanus@redhat.com> - 1.4.8-1
 - Resolves: RHEL-3636
 - Initial import for PG 16 module
