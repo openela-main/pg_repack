@@ -1,6 +1,6 @@
 Name:           pg_repack
 Version:        1.4.8
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Reorganize tables in PostgreSQL databases without any locks
 
 License:        BSD
@@ -8,6 +8,7 @@ URL:            http://reorg.github.io/%{name}/
 Source0:        https://github.com/reorg/%{name}/archive/ver_%{version}.tar.gz
 
 BuildRequires: 	make
+BuildRequires:  lz4-devel, libzstd-devel
 BuildRequires:  postgresql, gcc, openssl-devel, postgresql-server
 BuildRequires:  postgresql-server-devel >= 15
 BuildRequires:  readline-devel, zlib-devel, postgresql-static
@@ -62,6 +63,10 @@ make
 
 
 %changelog
+* Mon Aug 19 2024 Ales Nezbeda <anezbeda@redhat.com> 1.4.8-2
+- Add new build dependencies to fix build with lz4 enabled
+- Related: RHEL-47350
+
 * Tue Oct 25 2022 Filip Janus <fjanus@redhat.com> - 1.4.8-1
 - Update to version 1.4.8
 - Postgresql 15 is supported
